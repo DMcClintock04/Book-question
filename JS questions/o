@@ -1,0 +1,28 @@
+const obs = [];
+class Rectangle {
+  constructor(height, width, name) {
+    this.height = height;
+    this.width = width;
+    this.name = name;
+  }
+  get printf(){
+    return this.print();
+  }
+
+  print(){
+  return (this.height + ", " +this.name)
+}
+}
+for (let i=0; i<10; i++){
+  obs.push(new Rectangle(i,"fabsdferwg", "dfojodih"))
+}
+const byString= obs.filter(function(ob){
+  return ob.name.length > 2;
+  })
+const byNum= obs.map(function(ob){
+  return ob.height * 2;
+})
+
+obs.sort(function(a, b){return a-b});
+
+obs.sort(function(a, b){return a+b});
